@@ -1,1 +1,0 @@
-$env:GOOGLE_APLICATION_CREDENTIALS="C:\Users\Dell\Documents\TecnologiasWEBGINA2\Proyecto\E-tienda\nodejs\gina-a4be0-firebase-adminsdk-5z0he-213873cca1.json"

@@ -1,0 +1,21 @@
+@media (max-width: 980px) {
+    .centrarmd{
+        display: table;
+        padding-left: 10px;
+        margin: 0 auto;
+         text-align: center;
+ }
+} 
+
+@media (max-width: 980px) {
+    .centrar{
+        display: table;
+        padding-left: 10px;
+        margin: 0 auto;
+         
+ } 
+}
+
+.boton{
+    border-radius: 10px;
+}

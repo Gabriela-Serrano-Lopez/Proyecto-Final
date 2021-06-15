@@ -1,0 +1,26 @@
+<div class="row mt-5 form">
+    <div [hidden]="user">
+      <h1>Entrar con teléfono</h1>
+      <label for="phone">
+        Telefono
+      </label>
+
+      <input type="text" #telefono value="+524751080851">
+
+      <div id="recaptcha-container">
+      </div>
+
+      <button (click)="sendLoginCode(telefono.value)" class="btn btn-danger btn-lg btm-block">Enviar SMS</button>
+
+      <div *ngIf="windowRef.confirmationResult"></div>
+
+      <label for="code">Ingresa el código de verificación</label>
+      <input type="text" #verificationCode>
+
+      <button (click)="verifyLoginCode(verificationCode.value)" class="btn btn-danger btn-lg btm-block">Verificar</button>
+    </div>
+
+    <div *ngIf="user">
+      Ingresado correctamente!
+    </div>
+  </div>

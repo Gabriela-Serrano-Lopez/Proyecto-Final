@@ -1,0 +1,69 @@
+<div class="form" #div_form style="display: block;">
+
+    <div class="form-header">
+        <img
+        src="../../../../assets/logo.png">
+        <h4>E-Tienda</h4>
+        <h5 class="text-muted">Verificar teléfono</h5>
+    </div>
+
+    <div class="form-body text-muted">
+        Hola {{usuario.nombre}}, tu seguridad nos interesa.<br>
+        Te invitamos a que vincules tu teléfono, así podrás ingresar utilizándolo
+    </div>
+
+    <form [formGroup]="registerForm">
+        <div class="inputs" #paso1 style="display: block;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="group form-control">
+                        <input type="text" required formControlName="lada">
+                        <label>+52</label>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="group form-control">
+                        <input type="number" required formControlName="telefono" maxlength="10">
+                        <label>475 108 0851</label>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div id="recaptcha-container" style="text-align: -webkit-center;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="inputs" #paso2 style="display: none;">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="group form-control">
+                        <input type="number" required formControlName="codigo">
+                        <label>Ingresa el código</label>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div *ngIf="windowRef.confirmationResult"></div>
+        </div>
+    </form>
+
+
+    <button class="btn" (click)="clickEnviarCodigo()" #btnSiguiente>Enviar código</button>
+
+    <div class="row div-register">
+        <div class="col-md-12 align-items-center text-center">
+            <a class="btn-invisible" href="#">Recordar más tarde</a>
+        </div>
+    </div>
+
+    <div class="loader" style="display: none;" #loader>
+        <div class="loader-wheel"></div>
+    </div>
+</div>

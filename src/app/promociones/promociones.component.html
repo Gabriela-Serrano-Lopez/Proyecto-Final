@@ -1,0 +1,22 @@
+<div class="body">
+  <div class="row">
+    <!--Aqui-->
+    <div class="col-md-4" *ngFor = "let a of prom" >
+      <mdb-card cascade="true" wider="true">
+        
+        <mdb-card-body cascade="true" class="text-center">
+          <h4 class="card-title">
+            <strong>{{ a.nom }}</strong>
+          </h4>
+          <h5 class="indigo-text">
+            <strong>{{ a.prom }}</strong>
+          </h5>
+          <mdb-card-text>
+            {{ a.des | pipe: 70 }}
+          </mdb-card-text>
+          <a mdbBtn color="unique" class="waves-light" mdbWavesEffect>{{ a.cod }}</a>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+  </div>
+</div>

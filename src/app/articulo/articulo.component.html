@@ -1,0 +1,36 @@
+<br>
+<hr>
+<h1 class="animated fadeIn">{{articulo.nombre}}</h1>
+<hr>
+
+<div class="row animated fadeIn fast centrarmd">
+
+    <div class="col md-4 text-center">
+        <img width="300px" src="{{articulo.img}}" alt="" class="img-fluid">
+        <br><br>
+    </div>
+
+    <div class="col md-8">
+        <h4 class="card-title">
+            <strong>{{articulo.nombre}}</strong>
+        </h4>
+        <br>
+        <h5 class="indigo-text">
+            <strong>${{articulo.precio}}.00</strong>
+        </h5>
+        <br>
+        <mdb-card-text>
+            {{articulo.descripcion}}
+        </mdb-card-text>
+    </div>
+    
+<div>
+    <br>
+    <a [routerLink]="['/articulos']" class="btn btn-outline-danger btn-block centrar boton">Regresar</a>
+    <br>
+    <a class="btn btn-outline-success btn-block centrar boton" (click)="comprado();" >Comprar</a>
+
+</div>
+
+<br><br><br>
+</div>

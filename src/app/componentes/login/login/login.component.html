@@ -1,0 +1,69 @@
+<!--<div class="card login-card">
+
+    <div class="card-body">
+        <div class="login-header">
+            <h3>Acceder</h3>
+            <h5></h5>
+        </div>
+
+        <div class="group form-control">
+            <input type="text" required>
+            <label>Correo electrónico o teléfono</label>
+        </div>
+
+        <div class="text-left" style="padding-top: 10px;">
+            <div class="btn-invisible" id="olvidar_correo">¿Olvidaste el correo electrónico?</div>
+
+            <div class="row div-register">
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="btn-invisible" href="#">Crear cuenta</div>
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-azul btn-lg btm-block float-right">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+<div class="form" #div_form style="display: block;">
+
+    <div class="form-header">
+        <img
+            src="../../../../assets/logo.png">
+        <h4>E-Tienda</h4>
+        <h5 class="text-muted">Ingresar al sistema</h5>
+    </div>
+
+    <div class="group form-control" #divCorreo>
+        <input type="text" required #inputCorreo>
+        <label>Correo electrónico o teléfono</label>
+    </div>
+
+    <div class="group form-control" #divPassword style="display: none;">
+        <input type="password" required #inputPassword>
+        <label>Contraseña</label>
+    </div>
+
+    <button class="btn" (click)="clickSiguiente();" #btnSiguiente>Siguiente</button>
+
+    <div class="row div-register" #divPaso1>
+        <div class="col-md-6 d-flex align-items-center">
+            <a class="btn-invisible" href="#"></a>
+        </div>
+        <div class="col-md-6 text-right">
+            <a class="btn-invisible" [routerLink]="['/register']" >Crear cuenta</a>
+        </div>
+    </div>
+
+    <div class="row div-register" #divPaso2 style="display: none;">
+        <div class="col-md-6 d-flex align-items-center">
+            <a class="btn-invisible" href="#">Regresar</a>
+        </div>
+    </div>
+
+    <div class="loader" style="display: none;" #loader>
+        <div class="loader-wheel"></div>
+    </div>
+</div>

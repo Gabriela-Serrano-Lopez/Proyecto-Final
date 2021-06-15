@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-lg navbar-dark nav-pers shadow ">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- LOGO -->
+    <div class="nav justify-content-left">
+        <a class="navbar-brand" href="#">
+            <img src="../../../assets/logo.png" alt="" width="220" height="70">
+        </a>
+    </div>
+ 
+    <!-- NOMBRE DEL SITIO -->
+    <div class="nav">
+        
+    </div>
+
+    <!-- MENU -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+
+            <!-- HOME -->
+            <li class="nav-item center" routerLinkActive="active">
+                <a id="len1" class="nav-link hoverable " [routerLink]="['home']">Home</a>
+            </li>
+
+            <!-- TIENDA -->
+            <li class="nav-item center" routerLinkActive="active">
+                <a id="len2" class="nav-link hoverable " [routerLink]="['tienda']">Tienda</a>
+            </li>
+
+            <!-- ABOUT -->
+            <li class="nav-item center" routerLinkActive="active">
+                <a [matMenuTriggerFor]="appMenu" id="len3" class="nav-link hoverable ">About</a>
+                <!-- Uso de mat-menu de Angular Material -->
+                <mat-menu #appMenu="matMenu">
+                    <button mat-menu-item [routerLink]="['contacto']"> Contacto</button>
+                    <button mat-menu-item [routerLink]="['acercade']">Acerca De</button>
+                    <button mat-menu-item [routerLink]="['preguntas']">Preguntas Frecuentes</button>
+                </mat-menu>
+            </li>
+
+            <!-- Consultas de usuarios -->
+            <li class="nav-item center" routerLinkActive="active" *ngIf=login>
+                <a [matMenuTriggerFor]="appMenu2" id="len4" class="nav-link hoverable ">Extras</a>
+                <!-- Uso de mat-menu de Angular Material -->
+                <mat-menu #appMenu2="matMenu">
+                    <button mat-menu-item [routerLink]="['promociones']"> Promociones</button>
+                    <button mat-menu-item [routerLink]="['proximamente']"> Proximante</button>
+                    <button mat-menu-item [routerLink]="['estadisticas']"> Estadística</button>
+                    <button mat-menu-item [routerLink]="['verificar-telefono']">Validación por telefono</button>
+                </mat-menu>
+            </li>
+            <!-- USUARIO LOGIADO -->
+            <li *ngIf="session" class="nav-item center " routerLinkActive="disabled" >
+                <a id="len6" class="nav-link hoverable " [routerLink]=""> Bienvenido {{ usulog }}</a>    
+            </li>
+            <!-- admin loggeado podra ver crud -->
+            <li *ngIf="admin"class="nav-item center " routerLinkActive="active">
+                <a id="crud" class="nav-link hoverable" [routerLink]="['crud']"> CRUD ADMIN</a>
+            </li>
+
+        </ul>
+
+        <!-- LEMA -->
+        <small class="lema hidden-xs hidden-md">Las Compras del Futuro</small>
+        
+        
+        
+        <!-- BUSQUEDA -->
+        <div class="form-inline my-2 my-lg-0 busqueda centrar centrarmd">
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar" #buscarTexto (keyup.enter)="buscar(buscarTexto.value)">
+            <button (click)="buscar(buscarTexto.value)" class="btn" type="button">Buscar</button>
+
+        </div>
+
+        <div>
+
+            <a [matMenuTriggerFor]="userMenu" id="len4"><i class="fas fa-user-circle fa-2x" style="color: white;"></i></a>
+<!---->
+            <mat-menu #userMenu="matMenu">
+                <app-login-buttons ></app-login-buttons>
+                <!--
+                <button mat-menu-item [routerLink]="['register']">Registrarse</button>
+                <button mat-menu-item [routerLink]="['login']">Ingresar</button>
+            -->
+            </mat-menu>             
+        </div>
+    </div>
+
+</nav>

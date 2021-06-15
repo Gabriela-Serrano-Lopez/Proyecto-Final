@@ -1,0 +1,22 @@
+
+<!--
+<ng-container *ngIf="!session; else elseTemplate">
+    <div class="form-check-inline">
+        <button mat-menu-item class="btn btn-dark d-table" type="button" (click)="goLogin()">Login</button>
+        <button mat-menu-item class="btn btn-dark d-table" type="button" (click)="goRegister()">Sign in</button>
+    </div>
+</ng-container>
+<ng-template #elseTemplate>
+    <div class="form-check-inline">
+        <button class="btn btn-outline-dark" type="button" (click)="logout()">Logout</button>
+    </div>
+</ng-template>
+-->
+<ng-container *ngIf="!session; else elseTemplate" class="">
+    <button  class="btn d-block boton" type="button" (click)="goLogin()">Login </button>
+    <button  class="btn d-block boton" type="button" (click)="goRegister()">Sign in</button>
+</ng-container>
+
+<ng-template #elseTemplate >
+    <button class="btn boton" type="button" (click)="logout()">Logout</button>
+</ng-template>

@@ -1,0 +1,115 @@
+<header>
+    <div class="container-fluid">
+        <mat-card class="matheader">
+            <h1><b>Preguntas Frecuentes</b></h1>
+        </mat-card>
+        <mat-card>
+            <div class="example-button-row">
+                <button mat-stroked-button>
+                    <img src="../../assets/logoAcc/acc.png" alt="" srcset="" width="50" height="50">
+                </button>
+                <button mat-stroked-button (click) = "start()">
+                    <img src="../../assets/logoAcc/on.png" alt="" srcset="" width="50" height="50">
+                </button>
+                <button mat-stroked-button (click) = "pause()">
+                    <img src="../../assets/logoAcc/pausa.png" alt="" srcset="" width="50" height="50">
+                </button>
+                <button mat-stroked-button (click) = "resume()">
+                    <img src="../../assets/logoAcc/play.png" alt="" srcset="" width="50" height="50">
+                </button>
+                <button mat-stroked-button (click) = "cancelar()">
+                    <img src="../../assets/logoAcc/cancelar.png" alt="" srcset="" width="50" height="50">
+                </button>
+            </div>
+        </mat-card>
+    </div>
+</header>
+
+<body>
+    <mat-card>
+        <mat-accordion>
+            <!-- Pregunta 1 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <p><b>¿Qué productos puedo encontrar?</b></p>
+                    </mat-panel-title>
+
+                </mat-expansion-panel-header>
+                <p>Esta empresa proporciona una variedad de servicios de infraestructura tales como bienes alimenticios
+                    de máxima calidad y
+                    potencial inigualable, y productos de utilidad en su vida cotidiana.
+                </p>
+            </mat-expansion-panel>
+
+            <!-- Pregunta 2 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <p><b>¿Por qué E-Tienda es tan exitoso?</b></p>
+                    </mat-panel-title>
+
+                </mat-expansion-panel-header>
+                <p>La obsesión por el cliente. La clave principal del éxito de E-Tienda está en el cliente, que se
+                    encuentra en el centro de todas las decisiones. ...
+                    Así, sólo el proceso desde que el cliente hace su pedido hasta que lo recibe es analizado por más de
+                    300 métricas distintas.</p>
+            </mat-expansion-panel>
+
+            <!-- Pregunta 3 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <p><b>¿Qué tipo de proveedores tiene E-tienda?</b></p>
+                    </mat-panel-title>
+
+                </mat-expansion-panel-header>
+                <p>
+                    En E-tienda tenemos relación con diversos proveedores los cuales nos aseguran estar
+                    innovando continuamente para ofrecer la mejor gama y selección de productos manteniendo estándares
+                    de calidad.</p>
+            </mat-expansion-panel>
+
+
+            <!-- Pregunta 4 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <p><b>¿Qué beneficios tengo al ser cliente de E-tienda?</b></p>
+                    </mat-panel-title>
+
+                </mat-expansion-panel-header>
+                <p>
+                    Serás el primero en enterarte sobre las nuevos productos así
+                    como recibir promociones y descuentos constantemente para la tienda en línea.
+                </p>
+            </mat-expansion-panel>
+
+            <!-- Pregunta 5 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <p><b>¿Qué seguridad tienen mi compras por E-Tienda?</b></p>
+                    </mat-panel-title>
+
+                </mat-expansion-panel-header>
+                <p>E-Tienda  protege todos tus datos personales y de pago con los estándares de seguridad más altos de la industria
+                     ya que contamos con herramientas que nos ayudan a detectar y evitar fraudes en tiempo real.</p>
+            </mat-expansion-panel>
+
+            <!-- Pregunta 6 -->
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <p><b>¿Puedo devolver un producto comprado en E-Tienda?</b></p>
+                    </mat-panel-title>
+
+                </mat-expansion-panel-header>
+                <p>
+                    Si, las devoluciones estarán sujetas a los lineamientos, términos y condiciones de cada producto. 
+                    Esto se debe revisar en el detalle y reseña de cada producto dentro del catálogo de E-Tienda</p>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card>
+
+</body>

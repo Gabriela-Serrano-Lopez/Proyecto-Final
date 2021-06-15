@@ -1,0 +1,13 @@
+.list{
+    background-color:  #ebebeb;
+    font-family: Arial, sans-serif;
+}
+
+mat-grid-tile{
+    margin: 10px;
+    
+}
+
+.boton{
+    border-radius: 10px;
+}

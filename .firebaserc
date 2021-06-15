@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "gina-a4be0": {
+      "hosting": {
+        "isc200420": [
+          "gina-a4be0"
+        ]
+      }
+    }
+  }
+}

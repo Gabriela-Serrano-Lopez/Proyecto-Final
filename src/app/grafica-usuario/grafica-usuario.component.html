@@ -1,0 +1,19 @@
+<div class="container">
+    <br>
+    
+    <table class="table">
+      <thead>
+        <h2>Promedio de ventas por hora</h2>
+        <tr>
+          <th>Hora</th>
+          <th>Ventas realizadas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of prom">
+          <td> {{ a.hora }} </td>
+          <td> {{ a.ventas }} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

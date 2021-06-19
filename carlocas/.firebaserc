@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "login-ng-53c33": {
+      "hosting": {
+        "login": [
+          "login-ng-53c33"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "login-ng-53c33"
+  }
+}
